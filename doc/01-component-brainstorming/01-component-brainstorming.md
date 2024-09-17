@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Anna Krivoy**
+- **Krivoy.3**
+- **Due Date**
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -98,23 +90,19 @@ do good work.
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
 Also, protip: you can preview what your response looks like by hitting
 the magnifying glass icon in the upper-right corner or pressing CTRL+K and
 then V. This kind of button combination is called a chord, for whatever
 reason -->
+A few of my interests include music, fashion, designing and making jewlery, dancing, being active, and trying new things.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -157,10 +145,10 @@ format, we can be more confident that your designs will be possible.
         mutate `this`.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-        - No. All methods work with integers or other NaturalNumbers.
+      - No. All methods work with integers or other NaturalNumbers.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-        - Yes. NaturalNumber is base 10, and we track that in a constant called
+      - Yes. NaturalNumber is base 10, and we track that in a constant called
           `RADIX`.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
@@ -192,70 +180,91 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    A music Playlist would model a queue of songs created by a User.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - I like that this idea is simple, its a queue.
+    I would have addSong (adds a song to the end of the playlist),
+     remove (removes and accesses first song in the playlist, this is like a copy of dequeue and necessary to build secondary methods. )
+     size (reports size of playlist )
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - shuffle (outputs a queue/playlist, same songs but randomized order now. How can i prevent changing the original playlist? Shuffle generates a new object entirely. and then the user could delete later?)
+    - removeSong(index) the songs would be ordered/numbered, so user should be able to remove a specific song.
+    - createPlaylist, would this be a secondary method? No. User needs to be able to create a playlist to then call other methods on. Standard Method??
+    - changeIndex, I think the user should be able to change the order of the playlist completely. Not just remove at a specific index. But change the order of the playlist? I still want to preserve that original order.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      -Yes its mutable, they shoudl be able to create a playlist, add to it?
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - um idk
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - <im not too sure
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - should I made my remove kernel method directly remove the song at a specific
+      index, not just the first song??
+      With shuffle, itterate through the length of the playlist and create a copy of the playlist randomly removing indexes from the original playlist and adding them into that copy. Then tranfering our copy into our original.
 
-
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Closet/Outfit Generator
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+  Outfit generator would ideally have at least 3/4 components to it (accessory, top, bottom, shoes),
+  but I might just stick with 2 parts to the outfit (top and bottom). Show the user a top and bottom and user can click arrow
+  to show next top or bottom.
+  The order of tops and bottoms can be random or in a order.
+  Could I have the user save an outfit?- mmm maybe too advance. I feel like tops and bottoms should both be the 2 of the same type of object.
+  user can add tops and bottoms they have in their closet
+  - **Kernel Methods**
+    addClothing
+    size
+    Remove(according to some trait?) Idk how it would make sense to visually represent all object for use to chose from to remove?
+    just remove, which removes first clothing
+    >
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    save outfit
+    nextItem outputs a random type of clothing. Called when user clicks one of the arrows? Wait if I do arrows on left and right then I need to preserve order, but if I have arrows on just one side I dont need to preserve order
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes mutable because we want the size of the object to change
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      -Maybe map.Pair to store outfit combos somehow?
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - idk
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - removing a  specific clothing item can be done by iterating through length of all the items and use remove kernel method.
+      - also use kernel remove method to access an "item"
+      hmmmm like kind of like a pair of queues/ lists
 
-
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Dj Board?
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    Similar to the closet, a single board would have multiple components for the user to edit like maybe volume, frequency, equilizer, channel blend, input a track?,
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - increment
+    - decrement
+    like level of frequency and channel and volume are all numerical? Can be represented numnerically tbh.
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    -im not too sure how I would have my dj board set up, I feel like the board shouldn't be a component in itself, but pieced up components??
+    - some ideas for more methods maybe setting a value, not just increasing and decreasing by increments. Also being able to reset the djBoard?
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - im not sure, but I don't think so since the user is only changing parts of the dj board and not editing the dj board itself or creating a new djboard
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      Maybe Map.Pair? Im not sure this was a last minute idea, its on the bottom for a reason
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      idk
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      there wouldn't be many methods actually just increasing and decreasing values.
 
 ## Post-Assignment
 
