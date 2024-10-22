@@ -1,8 +1,8 @@
 # Portfolio Part 3: Component Interfaces
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Anna**
+- **Krivoy.3**
+- **October 16**
 
 ## Assignment Overview
 
@@ -255,8 +255,6 @@ better for future students.
 
 <!-- TODO: follow the link to share your feedback then delete this comment -->
 
-[markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
-[pottery-fails]: https://www.youtube.com/shorts/Kqb9l113F_0?feature=share
 [natural-number-kernel]: https://web.cse.ohio-state.edu/software/common/doc/src-html/components/naturalnumber/NaturalNumberKernel.html
 [natural-number]: https://web.cse.ohio-state.edu/software/common/doc/src-html/components/naturalnumber/NaturalNumber.html
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
